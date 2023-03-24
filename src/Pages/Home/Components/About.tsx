@@ -16,16 +16,19 @@ export const About = () => {
             </p>
             <ul>
               <li>
-                <i className="ri-check-double-line"></i> Desenvolver soluções para apoiar a melhoria do desempenho dos
-                                profissionais, desafiando-os a transformarem-se em profissionais de alto desempenho.
+                <i className="ri-check-double-line"></i> Desenvolver soluções
+                para apoiar a melhoria do desempenho dos profissionais,
+                desafiando-os a transformarem-se em profissionais de alto
+                desempenho.
               </li>
               <li>
-                <i className="ri-check-double-line"></i>Ser o serviço online de referência em Angola em desenvolvimento
-                                pessoal e gestão de carreiras
+                <i className="ri-check-double-line"></i>Ser o serviço online de
+                referência em Angola em desenvolvimento pessoal e gestão de
+                carreiras
               </li>
               <li>
-                <i className="ri-check-double-line"></i> Proximidade, Excelência e
-                                Inovação.
+                <i className="ri-check-double-line"></i> Proximidade, Excelência
+                e Inovação.
               </li>
             </ul>
           </div>
