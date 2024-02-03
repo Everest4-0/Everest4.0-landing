@@ -51,8 +51,8 @@ const items: Item[] = [
         ]
     },
     {
-        Name: "Programa de Preparação de Consultores Empresariais - Abril de 2024",
-        Caption: <> <b>Objectivo:</b> " Desenvolvimento de habilidade sobre técnicas e ferramentas para prestação de serviços de consultoria em gestão e transformação organizacional." <br/><b> Benefícios:</b>      <ul><li>   "Certificado de participação;"</li><li>        Estágio profissional na Everest LDA e numa empresa de contabilidade (aplicável somente aos 4 melhores participantes);</li><li> Mentoria individual com consultores financeiros e de investimentos (aplicável somente aos 4 melhores participantes)."</li></ul></>,
+        Name: "",
+        Caption: <><b>Programa de Preparação de Consultores Empresariais - Abril de 2024</b><br/> <b>Objectivo:</b> " Desenvolvimento de habilidade sobre técnicas e ferramentas para prestação de serviços de consultoria em gestão e transformação organizacional." <br/><b> Benefícios:</b>      <ul><li>   "Certificado de participação;"</li><li>        Estágio profissional na Everest LDA e numa empresa de contabilidade (aplicável somente aos 4 melhores participantes);</li><li> Mentoria individual com consultores financeiros e de investimentos (aplicável somente aos 4 melhores participantes)."</li></ul></>,
         contentPosition: "middle",
         Items: [
             {

@@ -30,10 +30,11 @@ export const Home = () => {
                 alt=""
                 style={{ marginLeft: '-10%' }}
               />
-              <h1 data-aos="fade-up">Juntos ao topo</h1>
+
               <h2 data-aos="fade-up" data-aos-delay="400">
                 Consultoria e Gestão de Carreiras
               </h2>
+              <h1 data-aos="fade-up">Juntos ao topo</h1>
               <div data-aos="fade-up" data-aos-delay="800">
                 <a href="#about" className="btn-get-started scrollto">
                   Iniciar
@@ -54,6 +55,8 @@ export const Home = () => {
 
         {/* <Clients />*/}
         <Highlight />
+
+        <Pricing />
         <About />
 
         <Count />
@@ -72,7 +75,6 @@ export const Home = () => {
 
         <Team />
 
-        <Pricing />
 
         <Faq />*/}
       </main>
