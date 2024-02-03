@@ -14,7 +14,7 @@ export const Header = () => {
                 <nav id="navbar" className="navbar">
                     <ul>
                         <li><a className="nav-link scrollto active" href="#hero">Inicio</a></li>
-                        <li><a className="nav-link scrollto " href="#portfolio">Destaque</a></li>
+                        <li><a className="nav-link scrollto " href="#highlight">Destaque</a></li>
                         <li><a className="nav-link scrollto" href="#pricing">Serviços e Preços</a></li>
                         <li><a className="nav-link scrollto" href="#about">App everest4.0</a></li>
                         <li><a className="nav-link scrollto" href="#about">Anúcions Vagas</a></li>
