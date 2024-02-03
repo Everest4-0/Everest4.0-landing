@@ -1,7 +1,7 @@
 /**
-* Template Name: Vesperr
+* Template Name: Everest4.0
 * Updated: Mar 10 2023 with Bootstrap v5.2.3
-* Template URL: https://bootstrapmade.com/vesperr-free-bootstrap-template/
+* Template URL: https://bootstrapmade.com/Everest4.0-free-bootstrap-template/
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */

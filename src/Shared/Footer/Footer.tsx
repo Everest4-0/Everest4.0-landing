@@ -8,7 +8,7 @@ export const Footer = () => {
                     <div className="row d-flex align-items-center">
                         <div className="col-lg-6 text-lg-left text-center">
                             <div className="copyright">
-                                &copy; Copyright <strong>Vesperr</strong>. All Rights Reserved
+                                &copy; Copyright <strong>Everest4.0</strong>. All Rights Reserved
                             </div>
                             <div className="credits">
                                 Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>

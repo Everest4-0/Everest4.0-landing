@@ -5,7 +5,7 @@ export const About = () => {
     <section id="about" className="about">
       <div className="container">
         <div className="section-title" data-aos="fade-up">
-          <h2>About Us</h2>
+          <h2>Sobre Nós</h2>
         </div>
 
         <div className="row content">
@@ -43,7 +43,7 @@ export const About = () => {
               desenvolvimento e gestão de carreiras.
             </p>
             <a href="#" className="btn-learn-more">
-              Learn More
+              Saber mais
             </a>
           </div>
         </div>

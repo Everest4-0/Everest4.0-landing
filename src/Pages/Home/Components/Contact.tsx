@@ -14,7 +14,7 @@ export const Contact = () => {
 
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
                 <div className="contact-about">
-                    <h3>Vesperr</h3>
+                    <h3>Everest4.0</h3>
                     <p>Cras fermentum odio eu feugiat. Justo eget magna fermentum iaculis eu non diam phasellus. Scelerisque felis imperdiet proin fermentum leo. Amet volutpat consequat mauris nunc congue.</p>
                     <div className="social-links">
                         <a href="#" className="twitter"><i className="bi bi-twitter"></i></a>

@@ -12,20 +12,29 @@ import { Services } from "./Components/Services";
 import { Team } from "./Components/Team";
 import { Testimonials } from "./Components/Testimonials";
 
+import imageBg from '../../assets/images/home/fundo-de-paisagem-de-montanha-everest.jpg'
+import logoDark from '../../assets/images/logo/logo-dark.png'
 export const Home = () => {
   return (
     <>
-      <section id="hero" className="d-flex align-items-center">
+      <section id="hero" className="d-flex align-items-center" style={{backgroundImage:`url(${imageBg})`, backgroundAttachment:'fixed', backgroundSize:'cover', height:'100vh'}}>
         <div className="container">
           <div className="row">
-            <div className="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
-              <h1 data-aos="fade-up">O topo a um passo de cada vez</h1>
+            <div className="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center" style={{color:'#FFF !important'}}>
+
+            <img
+                src={logoDark}
+                className="img-fluid animated"
+                alt=""
+                style={{marginLeft:'-10%'}}
+              />
+              <h1 data-aos="fade-up">Juntos ao topo</h1>
               <h2 data-aos="fade-up" data-aos-delay="400">
-                We are team of talented designers making websites with Bootstrap
+                Consultoria e Gestão de Carreiras
               </h2>
               <div data-aos="fade-up" data-aos-delay="800">
                 <a href="#about" className="btn-get-started scrollto">
-                  Get Started
+                  Iniciar
                 </a>
               </div>
             </div>
@@ -34,11 +43,6 @@ export const Home = () => {
               data-aos="fade-left"
               data-aos-delay="200"
             >
-              <img
-                src="assets/img/hero-img.png"
-                className="img-fluid animated"
-                alt=""
-              />
             </div>
           </div>
         </div>
@@ -46,17 +50,17 @@ export const Home = () => {
 
       <main id="main">
 
-        <Clients />
+      {/* <Clients />*/}
 
         <About />
 
         <Count />
-
+{/*
         <Services />
 
         <Courses />
 
-       {/*  <MoreServices /> */}
+       {/*  <MoreServices /> * /}
 
         <Features />
 
@@ -68,7 +72,7 @@ export const Home = () => {
 
         <Pricing />
 
-        <Faq />
+        <Faq />*/}
       </main>
     </>
   );
