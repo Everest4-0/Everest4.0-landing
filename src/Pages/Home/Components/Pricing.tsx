@@ -6,7 +6,7 @@ export const Pricing = () => {
     <div className="container">
 
         <div className="section-title">
-            <h2>Pricing</h2>
+            <h2>Preços</h2>
             <p>Sit sint consectetur velit nemo qui impedit suscipit alias ea</p>
         </div>
 

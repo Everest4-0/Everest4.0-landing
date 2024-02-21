@@ -6,7 +6,7 @@ export const Faq = () => {
                     <div className="container">
 
                         <div className="section-title" data-aos="fade-up">
-                            <h2>Frequently Asked Questions</h2>
+                            <h2>PERGUNTAS FREQUENTES</h2>
                         </div>
 
                         <div className="row faq-item d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">

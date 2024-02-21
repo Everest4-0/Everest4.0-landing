@@ -12,23 +12,36 @@ import { Services } from "./Components/Services";
 import { Team } from "./Components/Team";
 import { Testimonials } from "./Components/Testimonials";
 
-import imageBg from '../../assets/images/home/everest-montain.jpeg'
-import logoDark from '../../assets/images/logo/logo-dark.png'
+import imageBg from "../../assets/images/home/everest-montain.jpeg";
+import logoDark from "../../assets/images/logo/logo-dark.png";
 import { Highlight } from "./Components/Highlight";
+import { Contact } from "./Components/Contact";
 
 export const Home = () => {
   return (
     <>
-      <section id="hero" className="d-flex align-items-center" style={{ backgroundImage: `url(${imageBg})`, backgroundAttachment: 'fixed', backgroundSize: 'cover', height: '100vh' }}>
+      <section
+        id="hero"
+        className="d-flex align-items-center"
+        style={{
+          backgroundImage: `url(${imageBg})`,
+          backgroundAttachment: "fixed",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+          height: "100vh",
+        }}
+      >
         <div className="container">
           <div className="row">
-            <div className="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center" style={{ color: '#FFF !important' }}>
-
+            <div
+              className="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center"
+              style={{ color: "#FFF !important" }}
+            >
               <img
                 src={logoDark}
                 className="img-fluid animated"
                 alt=""
-                style={{ marginLeft: '-10%' }}
+                style={{ marginLeft: "-10%" }}
               />
               <h1 data-aos="fade-up">Juntos ao topo</h1>
               <h2 data-aos="fade-up" data-aos-delay="400">
@@ -44,37 +57,39 @@ export const Home = () => {
               className="col-lg-6 order-1 order-lg-2 hero-img"
               data-aos="fade-left"
               data-aos-delay="200"
-            >
-            </div>
+            ></div>
           </div>
         </div>
       </section>
 
       <main id="main">
+        <Clients />
 
-        {/* <Clients />*/}
         <Highlight />
+
         <About />
 
         <Count />
-        {/*
+
         <Services />
 
         <Courses />
 
-       {/*  <MoreServices /> * /}
+        {/*   <MoreServices /> */}
 
-        <Features />
+        {/*  <Features />
 
         <Testimonials />
 
-        <Portfolio />
-
-        <Team />
+        <Portfolio /> */}
 
         <Pricing />
 
-        <Faq />*/}
+        <Team />
+
+        <Faq />
+
+        <Contact />
       </main>
     </>
   );

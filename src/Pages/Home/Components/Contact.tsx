@@ -7,7 +7,7 @@ export const Contact = () => {
     <div className="container">
 
         <div className="section-title" data-aos="fade-up">
-            <h2>Contact Us</h2>
+            <h2>Fale connosco</h2>
         </div>
 
         <div className="row">

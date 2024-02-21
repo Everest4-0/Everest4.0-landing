@@ -6,7 +6,7 @@ export const Team = () => {
                     <div className="container">
 
                         <div className="section-title" data-aos="fade-up">
-                            <h2>Team</h2>
+                            <h2>Nossa Equipa</h2>
                             <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem</p>
                         </div>
 
