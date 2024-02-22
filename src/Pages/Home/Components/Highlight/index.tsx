@@ -1,5 +1,6 @@
 import React from "react";
 import HighlightCaroucel from "./HiglightCarousel";
+import { NewHighlight } from "./NewHighlight";
 
 export const Highlight = () => {
   return (
@@ -7,7 +8,8 @@ export const Highlight = () => {
       <div className="container pt-5">
 
         <div className="row content">
-            <HighlightCaroucel/>
+            {/* <HighlightCaroucel/> */}
+            <NewHighlight/>
         </div>
       </div>
     </section>

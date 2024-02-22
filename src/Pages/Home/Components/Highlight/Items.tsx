@@ -10,13 +10,13 @@ import vro1 from '../../../../assets/images/highlight/vro1.mp4'
 
 
 
-export type Item = {
+export type ItemType = {
     Name: string,
     Caption: any,
     contentPosition: "left" | "right" | "middle",
     Items: { Name: string, Image: string, Type?: 'Text' | 'Video' | 'Image' }[]
 }
-const items: Item[] = [
+const items: ItemType[] = [
     {
         Name: "Programa Laboratório de Talentos - Agosto 2023",
         Caption: "",

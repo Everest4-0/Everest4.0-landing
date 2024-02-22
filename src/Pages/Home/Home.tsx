@@ -67,6 +67,8 @@ export const Home = () => {
 
         <Highlight />
 
+        {/* <NewHighlight /> */}
+
         <About />
 
         <Count />
