@@ -79,7 +79,6 @@ export const Home = () => {
 
         {/*  <Features />
 
-        <Testimonials />
 
         <Portfolio /> */}
 
@@ -88,6 +87,8 @@ export const Home = () => {
         <Team />
 
         <Faq />
+
+        {/* <Testimonials /> */}
 
         <Contact />
       </main>

@@ -56,7 +56,12 @@ export const Services = () => {
       <div className="container">
         <div className="section-title" data-aos="fade-up">
           <h2>Servíços</h2>
-          <p>Magnam dolores commodi suscipit eius consequatur ex aliquid fug</p>
+          <p className="description">
+            O Everest4.0 é um aplicativo desenvolvido com base nos conceitos,
+            princípios, técnicas e ferramentas de Administração e Gestão de
+            Empresas, adaptados ao contexto pessoal, para promover uma cultura
+            de excelência na forma de ser, estar e trabalhar dos profissionais.
+          </p>
         </div>
 
         <div className="row">

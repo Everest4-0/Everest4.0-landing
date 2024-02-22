@@ -6,7 +6,7 @@ export const Testimonials = () => {
                     <div className="container">
 
                         <div className="section-title" data-aos="fade-up">
-                            <h2>Testimonials</h2>
+                            <h2>Testemunhos</h2>
                             <p>Magnam dolores commodi suscipit eum quidem consectetur velit</p>
                         </div>
 

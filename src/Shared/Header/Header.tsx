@@ -5,14 +5,12 @@ import "./index.css";
 export const Header = () => {
   return (
     <header id="header" className="fixed-top d-flex align-items-center">
-      <div className="container-fluid d-flex justify-content-center">
+      <div className="container d-flex justify-content-between">
+        <a href="#" className="logo-icon">
+          {/* <img src={logoDark} className="img-thumbnail" alt="..." /> */}
+        </a>
         <nav id="navbar" className="navbar">
           <ul>
-            <li>
-              <a href="#" className="logo-icon">
-                {/* <img src={logoDark} className="img-thumbnail" alt="..." /> */}
-              </a>
-            </li>
             <li>
               <a className="nav-link scrollto active" href="#hero">
                 Inicio
@@ -56,7 +54,7 @@ export const Header = () => {
                 {/* App everest4.0 */} FAQ
               </a>
             </li>
-           {/*  <li>
+            {/*  <li>
               <a className="nav-link scrollto" href="#about">
                 Anúcions Vagas
               </a>
