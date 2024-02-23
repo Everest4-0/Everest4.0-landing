@@ -9,7 +9,7 @@ export const Pricing = () => {
                     <h2>Serviços, Planos e Preços</h2>
                     <p>Estamos comprometidos em “Promover a melhoria contínua do
                         desempenho profissional dos jovens e a sustentabilidade dos
-                        empreendedores", oferecendo serviços de mentoria para profissionais e de consultoria para empreendedores, pequenas e medias empresas.</p>
+                        empreendedores", oferecendo serviços de mentoria para profissionais e de consultoria para empreendedores, pequenas e médias empresas.</p>
                 </div>
 
                 <div className="row">
@@ -30,7 +30,7 @@ export const Pricing = () => {
                     </div>
 
                     <div className="col-lg-3 col-md-6 mt-4 mt-lg-0">
-                        <div className="box recommended" data-aos="zoom-in-left" data-aos-delay="200">
+                        <div className="box  recommendedx" data-aos="zoom-in-left" data-aos-delay="200">
                             <h6>Mentoria</h6>
                             <h3>Plano Kilimanjaro</h3>
                             <h4><sup>Kz</sup>50.000<span> / hora</span></h4>
@@ -59,11 +59,13 @@ export const Pricing = () => {
 
                     <div className="col-lg-3 col-md-6">
                         <div className="box" data-aos="zoom-in-right" data-aos-delay="200">
+                        <h6>Empresas</h6>
                             <h3>Consultoria</h3>
                             <h4><sup>Kz</sup>100.000<span> / hora</span></h4>
                             <ul>
                                 <li>Consutoria em Gestão empresarial, Transformação organizacional, Project Management Officer (PMO) e Gestão estratégica do capital humano.</li>
                             </ul>
+                            <br/>
                             <div className="btn-wrap">
                                 <a href="#" className="btn-buy">Subscrever</a>
                             </div>

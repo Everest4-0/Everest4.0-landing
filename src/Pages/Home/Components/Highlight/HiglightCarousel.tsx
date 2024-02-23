@@ -12,6 +12,7 @@ import {
     Button,
 } from '@mui/material';
 import items, { Item } from './Items';
+import BannerDialog from './BannerDialog';
 
 
 const HighlightCaroucel = () => {
@@ -53,7 +54,13 @@ interface BannerProps {
 
 
 const Banner = (props: BannerProps) => {
+    const [open, setOpen] = React.useState(false);
+    const [currentContent, setContent] = React.useState<any>();
 
+    const handleClick = (item: any) => {
+        setContent(item)
+        setOpen(true);
+    }
     const contentPosition = props.contentPosition ? props.contentPosition : "left"
     const totalItems: number = props.length ? props.length : 3;
     const mediaLength = totalItems - 1;
@@ -85,11 +92,12 @@ const Banner = (props: BannerProps) => {
             <Grid item xs={4} key={item.Name}>
                 {item.Type === 'Video' ?
 
-                    <video src={item.Image}  poster="poster.jpg" loop muted autoPlay style={{height:"100%", paddingRight:"-105%" }} >
+                    <video onClick={()=>handleClick(item)} src={item.Image} poster="poster.jpg" loop muted autoPlay style={{ height: "100%", paddingRight: "-105%" }} >
                         <a href={item.Image}>Download song</a>
                     </video>
                     :
                     <CardMedia
+                    onClick={()=>handleClick(item)}
                         className="Media"
                         image={item.Image}
                         title={item.Name}
@@ -116,6 +124,7 @@ const Banner = (props: BannerProps) => {
             <Grid container spacing={0} className="BannerGrid">
                 {items}
             </Grid>
+            <BannerDialog open={open} setOpen={setOpen} item={currentContent} />
         </Card>
     )
 }

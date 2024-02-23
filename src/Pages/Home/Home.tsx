@@ -15,6 +15,7 @@ import { Testimonials } from "./Components/Testimonials";
 import imageBg from '../../assets/images/home/everest-montain.jpeg'
 import logoDark from '../../assets/images/logo/logo-dark.png'
 import { Highlight } from "./Components/Highlight";
+import { Contact } from "./Components/Contact";
 
 export const Home = () => {
   return (
@@ -60,12 +61,12 @@ export const Home = () => {
         <About />
 
         <Count />
-        {/*
+       
         <Services />
 
         <Courses />
 
-       {/*  <MoreServices /> * /}
+         <MoreServices /> 
 
         <Features />
 
@@ -76,7 +77,8 @@ export const Home = () => {
         <Team />
 
 
-        <Faq />*/}
+        <Faq />
+        <Contact/>
       </main>
     </>
   );

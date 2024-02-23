@@ -17,10 +17,8 @@ export const Count = () => {
                                     <div className="count-box">
                                         <i className="bi bi-emoji-smile"></i>
                                         <span data-purecounter-start="0" data-purecounter-end="65" data-purecounter-duration="1" className="purecounter"></span>
-                                        <p><strong>Clientes Satisfeitos: </strong>
-                                            Nosso maior orgulho reside na satisfação dos nossos clientes.
-                                            Cada sorriso é o reflexo do nosso comprometimento em superar
-                                            expectativas e proporcionar experiências excepcionais
+                                        <p><strong>Missão: </strong>
+                                            Promover a melhoria contínua do desempenho profissional dos jovens e a sustentabilidade dos empreendedores
                                         </p>
                                     </div>
                                 </div>
@@ -29,24 +27,8 @@ export const Count = () => {
                                     <div className="count-box">
                                         <i className="bi bi-journal-richtext"></i>
                                         <span data-purecounter-start="0" data-purecounter-end="85" data-purecounter-duration="1" className="purecounter"></span>
-                                        <p><strong>Projetos: </strong>
-                                            Cada projeto que abraçamos é uma oportunidade de transformar
-                                            ideias em realizações tangíveis. A diversidade e complexidade
-                                            dos nossos projetos demonstram a nossa capacidade de inovação
-                                            e a paixão pela excelência.
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div className="col-md-6 d-md-flex align-items-md-stretch">
-                                    <div className="count-box">
-                                        <i className="bi bi-clock"></i>
-                                        <span data-purecounter-start="0" data-purecounter-end="18" data-purecounter-duration="1" className="purecounter"></span>
-                                        <p><strong>Anos de Experiência: </strong>
-                                            Nossa trajetória é um testemunho da nossa dedicação contínua.
-                                            Com anos de experiência, acumulamos conhecimento, habilidades
-                                            e uma compreensão profunda do mercado, permitindo-nos oferecer
-                                            soluções que transcendem as expectativas."
+                                        <p><strong>Visão: </strong>
+                                        Ser a referência em Angola em integração profissional e gestão de carreiras
                                         </p>
                                     </div>
                                 </div>
@@ -54,12 +36,20 @@ export const Count = () => {
                                 <div className="col-md-6 d-md-flex align-items-md-stretch">
                                     <div className="count-box">
                                         <i className="bi bi-award"></i>
+                                        <span data-purecounter-start="0" data-purecounter-end="18" data-purecounter-duration="1" className="purecounter"></span>
+                                        <p><strong>Valores: </strong>
+                                            Excelência - Parceria - Serviço - Integridade
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div className="col-md-6 d-md-flex align-items-md-stretch">
+                                    <div className="count-box">
+                                        <i className="bi bi-clock"></i>
                                         <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" className="purecounter"></span>
-                                        <p><strong>Prêmios: </strong>
-                                            Os prêmios que conquistamos são mais do que simples reconhecimentos;
-                                            são validações do nosso compromisso com a excelência. Cada troféu é
-                                            resultado do esforço incansável da nossa equipe e da busca incessante
-                                            pela inovação."
+                                        <p><strong>
+                                            Juntos ao topo
+                                            </strong>
                                         </p>
                                     </div>
                                 </div>
