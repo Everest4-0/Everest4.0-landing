@@ -1,4 +1,13 @@
 import React from "react";
+import styled from "styled-components";
+
+const Description = styled.p`
+  margin: 0 0 0 10px;
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  color: #484848;
+
+`
 
 export const About = () => {
   return (
@@ -16,19 +25,26 @@ export const About = () => {
             </p>
             <ul>
               <li>
-                <i className="ri-check-double-line"></i> Desenvolver soluções
-                para apoiar a melhoria do desempenho dos profissionais,
-                desafiando-os a transformarem-se em profissionais de alto
-                desempenho.
+              <Description>
+              <i className="ri-check-double-line"></i>{" "}
+                <b className="title">Valores: </b>
+                Parceria, Excelência e Transparência
+              </Description>
               </li>
               <li>
-                <i className="ri-check-double-line"></i>Ser o serviço online de
-                referência em Angola em desenvolvimento pessoal e gestão de
-                carreiras
+                <Description>
+                <i className="ri-check-double-line"></i>
+                <strong>Visão: </strong>
+                Ser a referência na transformação das pessoas e negócios
+                </Description>
               </li>
               <li>
-                <i className="ri-check-double-line"></i> Proximidade, Excelência
-                e Inovação.
+                <Description>
+                <i className="ri-check-double-line"></i>
+                <b className="title">Missão: </b>
+                Despertar o potencial dos profissionais e das empresas para
+                gerar melhores resultados
+                </Description>
               </li>
             </ul>
           </div>
