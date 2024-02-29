@@ -64,7 +64,7 @@ export const Home = () => {
       </section>
 
       <main id="main">
-        <Clients />
+        {/*<Clients />*/}
 
         <Highlight />
 
@@ -75,7 +75,7 @@ export const Home = () => {
        
         <Services />
 
-        <Courses />
+        {/*<Courses />*/}
 
         {/*   <MoreServices /> */}
 
@@ -85,9 +85,9 @@ export const Home = () => {
         <Portfolio /> */}
 
 
-        <Team />
+        {/*<Team />
 
-        <Faq />
+      <Faq />*/}
 
         {/* <Testimonials /> */}
 

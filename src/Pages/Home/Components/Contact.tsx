@@ -81,8 +81,8 @@ export const Contact = () => {
 
                     <div className="col-lg-5 col-md-12" data-aos="fade-up" data-aos-delay="300">
                         <pre>
-                            {JSON.stringify(form, null, 1)}
-                            {JSON.stringify(error, null, 1)}
+                            {/*JSON.stringify(form, null, 1)}
+                            {JSON.stringify(error, null, 1)*/}
                         </pre>
 
                         <form action="#" method="post" role="form" className="php-email-form">
