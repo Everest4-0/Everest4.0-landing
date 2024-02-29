@@ -1,5 +1,73 @@
-import React from 'react'
+import React from "react";
 
+const prices = [
+  {
+    title: "Grátis",
+    curency: "AKZ",
+    value: "0",
+    time: "MÊS",
+    descriptions: [
+      "Desafios",
+      "Gestão e compromissos",
+      "Diagnóstico",
+      "Notícias",
+      "-",
+      "-",
+    ],
+    link: "#",
+    recomended: false,
+  },
+  {
+    title: "Básico",
+    curency: "AKZ",
+    value: "4.000",
+    time: "MÊS",
+    descriptions: [
+      "Vagas de emprego",
+      "Cursos online",
+      "Objectivos e planos de acção",
+      "Controlo financeiro",
+      "Feedback 360º",
+      "Mais plano grátis",
+    ],
+    link: "#",
+    recomended: true,
+  },
+  {
+    title: "Profissional",
+    curency: "AKZ",
+    value: "34.000",
+    time: "MÊS",
+    descriptions: [
+      "Gestão de carreiras",
+      "Coaching online",
+      "Plano de desenvolvimento de competências",
+      "Mais plano básico",
+      "-",
+      "-",
+    ],
+    link: "#",
+    recomended: false,
+  },
+];
+
+const animation = [
+  {
+    class: "box",
+    data_os: "zoom-in-right",
+    data_os_delay: "200",
+  },
+  {
+    class: "box",
+    data_os: "zoom-in",
+    data_os_delay: "100",
+  },
+  {
+    class: "box",
+    data_os: "zoom-in-left",
+    data_os_delay: "200",
+  },
+];
 export const Pricing = () => {
     return (
         <section id="pricing" className="pricing">

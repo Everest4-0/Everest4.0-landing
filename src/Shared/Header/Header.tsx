@@ -1,5 +1,8 @@
-import React from 'react'
-import logoDark from '../../assets/images/logo/logo-dark.png'
+import logoDark from "../../assets/images/logo/logo-dark.png";
+import HeaderList from "./HeaderList";
+
+import "./index.css";
+
 export const Header = () => {
     return (
         <header id="header" className="fixed-top d-flex align-items-center">
@@ -46,7 +49,34 @@ export const Header = () => {
                     <i className="bi bi-list mobile-nav-toggle"></i>
                 </nav>
 
+            <div
+              className="offcanvas offcanvas-end"
+              tabIndex={-1}
+              id="offcanvasNavbar"
+              aria-labelledby="offcanvasNavbarLabel"
+            >
+              <div className="offcanvas-header">
+                <h5 className="offcanvas-title" id="offcanvasNavbarLabel">
+                  Menu
+                </h5>
+                <button
+                  type="button"
+                  className="btn shadow-none"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                >
+                  <i className="bi bi-x-lg"></i>
+                </button>
+              </div>
+              <div className="offcanvas-body">
+                <HeaderList show={true} />
+              </div>
             </div>
-        </header>
-    )
-}
+
+            
+          </div>
+        
+      </header>
+    
+  );
+};
