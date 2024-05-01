@@ -38,7 +38,7 @@ export const Contact = () => {
     }
     return (
 
-        <section id="contact" className="contact">
+        <section id="contact" className="contact" style={{paddingTop:200}}>
             <div className="container">
 
                 <div className="section-title" data-aos="fade-up">
@@ -52,12 +52,12 @@ export const Contact = () => {
                         <div className="info">
                             <div>
                                 <i className="ri-map-pin-line"></i>
-                                <p>Urbanização Nova Vida, rua 3A, casa n.º 16, Luanda-Angola</p>
+                                <p>Bairro Morro Bento, Rua da Maxi,  Edifício Galeria Victória, Lunada - Angola</p>
                             </div>
 
                             <div>
                                 <i className="ri-mail-send-line"></i>
-                                <p>everest40lda@gmail.com</p>
+                                <p>apoiocliente@everest40.com</p>
                             </div>
 
                             <div>

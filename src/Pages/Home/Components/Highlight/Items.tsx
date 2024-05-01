@@ -44,7 +44,7 @@ const items: ItemType[] = [
                 Image: pro4
             },
             {
-                Name: "Learus Vacuum Cleaner",
+                Name: "",
                 Image: vro1,
                 Type: 'Video'
             }

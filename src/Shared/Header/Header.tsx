@@ -18,12 +18,12 @@ export const Header = () => {
                     <ul>
                         <li><a className="nav-link scrollto active" href="#hero">Início</a></li>
                         <li><a className="nav-link scrollto " href="#highlight">Novidades</a></li>
-                        <li><a className="nav-link scrollto" href="#pricing">Serviços e Preços</a></li>
+                        <li><a className="nav-link scrollto" href="#services">Serviços</a></li>
                         {/*<li><a className="nav-link scrollto" href="#about">App Everest4.0</a></li>
                         <li><a className="nav-link scrollto" href="#about">Anúncio de Vagas</a></li>*/}
                         <li><a className="nav-link scrollto" href="#about">Sobre Nós</a></li>
-                        <li><a className="nav-link scrollto" href="#services">Serviços</a></li>
-                        {/*<li><a className="nav-link scrollto" href="#courses">Courses</a></li>
+                        {/*<li><a className="nav-link scrollto" href="#services">Serviços</a></li>
+                        <li><a className="nav-link scrollto" href="#courses">Courses</a></li>
                         <li><a className="nav-link scrollto" href="#team">Nossa Equipa</a></li>*/}
                         {/*<li className="dropdown"><a href="#"><span>Drop Down</span> <i className="bi bi-chevron-down"></i></a>
                             <ul>

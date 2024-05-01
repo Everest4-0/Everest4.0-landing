@@ -75,9 +75,7 @@ export const Pricing = () => {
 
                 <div className="section-title">
                     <h2>Serviços, Planos e Preços</h2>
-                    <p>Estamos comprometidos em “Promover a melhoria contínua do
-                        desempenho profissional dos jovens e a sustentabilidade dos
-                        empreendedores", oferecendo serviços de mentoria para profissionais e de consultoria para empreendedores, pequenas e médias empresas.</p>
+                    <p>Prestamos serviços de mentoria para profissionais, consultoria e formação para empreendedores, pequenas e médias empresas.</p>
                 </div>
 
                 <div className="row">

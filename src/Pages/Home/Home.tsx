@@ -12,7 +12,7 @@ import { Services } from "./Components/Services";
 import { Team } from "./Components/Team";
 import { Testimonials } from "./Components/Testimonials";
 
-import imageBg from "../../assets/images/home/everest-montain.jpeg";
+import imageBg from "../../assets/images/home/everest-montain.jpg";
 import logoDark from "../../assets/images/logo/logo-dark.png";
 import { Highlight } from "./Components/Highlight";
 import { Contact } from "./Components/Contact";
@@ -29,13 +29,14 @@ export const Home = () => {
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
           height: "100vh",
+          backgroundPosition: 'center'
         }}
       >
         <div className="container">
           <div className="row">
             <div
               className="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center"
-              style={{ color: "#FFF !important" }}
+              style={{ color: "#FFF !important", background:'rgba(0,0,0,.5)', padding:'7% 30px' }}
             >
               <img
                 src={logoDark}
@@ -68,12 +69,14 @@ export const Home = () => {
 
         <Highlight />
 
+        {/**
         <Pricing />
+         */}
+        <Services />
         <About />
 
         <Count />
-       
-        <Services />
+
 
         {/*<Courses />*/}
 
