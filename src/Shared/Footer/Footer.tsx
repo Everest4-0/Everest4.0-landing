@@ -11,7 +11,7 @@ export const Footer = () => {
                                 &copy; Copyright <strong>Everest4.0</strong>. All Rights Reserved
                             </div>
                             <div className="credits">
-                                Designed by <a href="#">Hpbt</a>
+                                Designed by <a href="https://hiperbite.ao">Hiperbite</a>
                             </div>
                         </div>
                         <div className="col-lg-6">

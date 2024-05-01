@@ -8,6 +8,7 @@ import {
   HighComponentBox,
   HighComponentVideoBox,
 } from "./NewHighlightStyled";
+import BannerDialog from "./BannerDialog";
 
 interface Iitem {
   i: number;
@@ -25,6 +26,13 @@ export function NewHighlight(props: any) {
 }
 
 function Item({ item, i }: Iitem) {
+  const [open, setOpen] = React.useState(false);
+  const [currentContent, setContent] = React.useState<any>();
+
+  const handleClick = (item: any) => {
+    setContent(item)
+    setOpen(true);
+  }
   return (
     <Paper className="border-0 shadow-none">
       <ContentBox className="row p-0">
@@ -41,7 +49,7 @@ function Item({ item, i }: Iitem) {
           {
             return data.Type == "Video" ? (
               <>
-                <HighComponentVideoBox className={` col-md-4   p-0`}>
+                <HighComponentVideoBox  onClick={()=>handleClick(data)} className={` col-md-4   p-0`}>
                   <video
                     src={data.Image}
                     poster="poster.jpg"
@@ -54,7 +62,7 @@ function Item({ item, i }: Iitem) {
                 </HighComponentVideoBox>
               </>
             ) : (
-              <HighComponentBox
+              <HighComponentBox onClick={()=>handleClick(data)}
                 className={` col-md-4  order-${key} p-0`}
                 key={key}
                 image={data.Image}
@@ -65,6 +73,7 @@ function Item({ item, i }: Iitem) {
           }
         })}
       </ContentBox>
+      <BannerDialog open={open} setOpen={setOpen} item={currentContent} />
     </Paper>
   );
 }
