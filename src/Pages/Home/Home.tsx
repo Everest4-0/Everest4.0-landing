@@ -12,7 +12,7 @@ import { Services } from "./Components/Services";
 import { Team } from "./Components/Team";
 import { Testimonials } from "./Components/Testimonials";
 
-import imageBg from "../../assets/images/home/everest-montain.jpeg";
+import imageBg from "../../assets/images/home/everest-montain-4d002185.jpg";
 import logoDark from "../../assets/images/logo/logo-dark.png";
 import { Highlight } from "./Components/Highlight";
 import { Contact } from "./Components/Contact";
