@@ -12,10 +12,11 @@ import { Services } from "./Components/Services";
 import { Team } from "./Components/Team";
 import { Testimonials } from "./Components/Testimonials";
 
-import imageBg from "../../assets/images/home/everest-montain.jpg";
+import imageBg from "../../assets/images/home/everest-montain.jpeg";
 import logoDark from "../../assets/images/logo/logo-dark.png";
 import { Highlight } from "./Components/Highlight";
 import { Contact } from "./Components/Contact";
+import { AccessApp } from "./Components/AccessApp";
 
 export const Home = () => {
   return (
@@ -73,10 +74,12 @@ export const Home = () => {
         <Pricing />
          */}
         <Services />
+
         <About />
 
         <Count />
 
+        <AccessApp />
 
         {/*<Courses />*/}
 

@@ -37,10 +37,10 @@ function Item({ item, i }: Iitem) {
     <Paper className="border-0 shadow-none">
       <ContentBox className="row p-0">
         <Content
-          className={`col-md-4 order-${i} `}
+          className={`col-md-6 order-${i} `}
           /* className="col-md-4 order-2" */ key={i}
         >
-          <h2 className="title h2">{item.Name}</h2>
+          <h2 className="title h2" style={{paddingTop: "15px"}}>{item.Name}</h2>
           <Typography className="Title">{item.Name}</Typography>
           <Typography className="Caption">{item.Caption}</Typography>
         </Content>
@@ -49,7 +49,7 @@ function Item({ item, i }: Iitem) {
           {
             return data.Type == "Video" ? (
               <>
-                <HighComponentVideoBox  onClick={()=>handleClick(data)} className={` col-md-4   p-0`}>
+                <HighComponentVideoBox  onClick={()=>handleClick(data)} className={` col-md-6   p-0`}>
                   <video
                     src={data.Image}
                     poster="poster.jpg"
@@ -63,7 +63,7 @@ function Item({ item, i }: Iitem) {
               </>
             ) : (
               <HighComponentBox onClick={()=>handleClick(data)}
-                className={` col-md-4  order-${key} p-0`}
+                className={` col-md-6  order-${key} p-0`}
                 key={key}
                 image={data.Image}
               >
