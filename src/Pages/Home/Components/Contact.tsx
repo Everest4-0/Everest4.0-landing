@@ -52,7 +52,7 @@ export const Contact = () => {
                         <div className="info">
                             <div>
                                 <i className="ri-map-pin-line"></i>
-                                <p>Bairro Morro Bento, Rua da Maxi,  Edifício Galeria Victória, Lunada - Angola</p>
+                                <p>Bairro Morro Bento, Rua da Maxi,  Edifício Galeria Victória, Luanda - Angola</p>
                             </div>
 
                             <div>
