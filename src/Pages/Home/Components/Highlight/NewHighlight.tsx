@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import Carousel from "react-material-ui-carousel";
 import { Paper, Button, Typography } from "@mui/material";
-import items, { ItemType } from "./Items";
+import ReactMarkdown from 'react-markdown';
 import {
   Content,
   ContentBox,
@@ -9,69 +9,94 @@ import {
   HighComponentVideoBox,
 } from "./NewHighlightStyled";
 import BannerDialog from "./BannerDialog";
+import useApi from "../../../../hooks/useApi";
 
-interface Iitem {
-  i: number;
-  item: ItemType;
-}
+export type MediaType = {
+  data: {
+    attributes: { url: string; mime: string; name: string };
+  };
+};
+
+export type HighlightType = {
+  id?: string;
+  attributes: {
+    title: string;
+    caption: any;
+    contentPosition: "left" | "right";
+    media: MediaType
+  };
+};
 
 export function NewHighlight(props: any) {
+  const { data, error, loading } = useApi<HighlightType[]>({
+    endpoint: "/highlights?populate=media",
+    method: "GET",
+  });
+
   return (
-    <Carousel className="container pt-5 ">
-      {items.map((item, i) => (
-        <Item i={i} item={item} />
-      ))}
-    </Carousel>
+    <>
+      {data && (
+        <Carousel className="container pt-5 ">
+          {data?.map((item, key) => {
+            return <Item key={key} item={item} />;
+          })}
+        </Carousel>
+      )}
+    </>
   );
 }
 
-function Item({ item, i }: Iitem) {
-  const [open, setOpen] = React.useState(false);
-  const [currentContent, setContent] = React.useState<any>();
+function Item({ item, key }: { key: number; item: HighlightType }) {
+  const [open, setOpen] = useState(false);
+  const [currentContent, setContent] = useState<any>();
 
-  const handleClick = (item: any) => {
-    setContent(item)
+  const handleClick = (item: MediaType) => {
+    setContent(item);
     setOpen(true);
-  }
+  };
+
   return (
-    <Paper className="border-0 shadow-none">
+    <Paper className="border-0 shadow-none" key={`item-${key} `}>
       <ContentBox className="row p-0">
         <Content
-          className={`col-md-6 order-${i} `}
-          /* className="col-md-4 order-2" */ key={i}
+          className={`col-md-6 order-${key} `}
+          /* className="col-md-4 order-2" */
         >
-          <h2 className="title h2" style={{paddingTop: "15px"}}>{item.Name}</h2>
-          <Typography className="Title">{item.Name}</Typography>
-          <Typography className="Caption">{item.Caption}</Typography>
+          <h2 className="title h2" style={{ paddingTop: "28px" }}>
+            {item.attributes.title}
+          </h2>
+          <ReactMarkdown className="markdown-content">{item.attributes.caption}</ReactMarkdown>;
         </Content>
 
-        {item.Items.map((data, key) => {
-          {
-            return data.Type == "Video" ? (
-              <>
-                <HighComponentVideoBox  onClick={()=>handleClick(data)} className={` col-md-6   p-0`}>
-                  <video
-                    src={data.Image}
-                    poster="poster.jpg"
-                    loop
-                    muted
-                    autoPlay
-                  >
-                    <a href={data.Image}>Download song</a>
-                  </video>
-                </HighComponentVideoBox>
-              </>
-            ) : (
-              <HighComponentBox onClick={()=>handleClick(data)}
-                className={` col-md-6  order-${key} p-0`}
-                key={key}
-                image={data.Image}
+        {item.attributes.media.data.attributes.mime
+          .includes("video") ? (
+          <>
+            <HighComponentVideoBox
+              onClick={() => handleClick(item.attributes.media)}
+              className={` col-md-6   p-0`}
+            >
+              <video
+                src={item.attributes.media.data.attributes.url}
+                poster="poster.jpg"
+                loop
+                muted
+                autoPlay
               >
-                <div className="banner">banner</div>
-              </HighComponentBox>
-            );
-          }
-        })}
+                <a href={item.attributes.media.data.attributes.url}>
+                  Download song
+                </a>
+              </video>
+            </HighComponentVideoBox>
+          </>
+        ) : (
+          <HighComponentBox
+            onClick={() => handleClick(item.attributes.media)}
+            className={` col-md-6   p-0`}
+            image={item.attributes.media.data.attributes.url}
+          >
+            <div className="banner">banner</div>
+          </HighComponentBox>
+        )}
       </ContentBox>
       <BannerDialog open={open} setOpen={setOpen} item={currentContent} />
     </Paper>
