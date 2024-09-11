@@ -1,7 +1,10 @@
 import React, { useCallback, useEffect, useState } from "react";
 import Carousel from "react-material-ui-carousel";
 import { Paper, Button, Typography } from "@mui/material";
-import ReactMarkdown from 'react-markdown';
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
+
+
 import {
   Content,
   ContentBox,
@@ -17,19 +20,25 @@ export type MediaType = {
   };
 };
 
+export type LinkDescriptionType = {
+  link: string;
+  description: string;
+};
+
 export type HighlightType = {
   id?: string;
   attributes: {
     title: string;
     caption: any;
     contentPosition: "left" | "right";
-    media: MediaType
+    media: MediaType;
+    links?: LinkDescriptionType[];
   };
 };
 
 export function NewHighlight(props: any) {
   const { data, error, loading } = useApi<HighlightType[]>({
-    endpoint: "/highlights?populate=media",
+    endpoint: "/highlights?populate=media,links&sort=createdAt:desc",
     method: "GET",
   });
 
@@ -65,11 +74,20 @@ function Item({ item, key }: { key: number; item: HighlightType }) {
           <h2 className="title h2" style={{ paddingTop: "28px" }}>
             {item.attributes.title}
           </h2>
-          <ReactMarkdown className="markdown-content">{item.attributes.caption}</ReactMarkdown>;
+          <ReactMarkdown className="markdown-content" remarkPlugins={[remarkGfm]}>
+            {item.attributes.caption}
+          </ReactMarkdown>
+
+          {item.attributes.links?.map(({ link, description }) => {
+            return (
+              <>
+                 <a style={{color: "#fff",  textDecoration: "underline"}} href={link} target="_blank"> {description}</a> <br />
+              </>
+            );
+          })}
         </Content>
 
-        {item.attributes.media.data.attributes.mime
-          .includes("video") ? (
+        {item.attributes.media.data.attributes.mime.includes("video") ? (
           <>
             <HighComponentVideoBox
               onClick={() => handleClick(item.attributes.media)}

@@ -6,6 +6,7 @@ import imageD2 from "../../../assets/images/home/device2.png";
 import imageD3 from "../../../assets/images/home/device3.png";
 
 const Section = styled.div`
+overflow: hidden;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -19,7 +20,6 @@ const Section = styled.div`
   h2 {
     color: #fff;
   }
-  overflow: scroll;
 `;
 
 export const AccessApp = () => {

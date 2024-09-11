@@ -32,10 +32,11 @@ const BannerDialog = ({
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >
-        <DialogContent>
+        <DialogContent className="d-flex justify-content-center">
           {item.data.attributes.mime.includes("video") ? (
             <video
               src={item.data.attributes.url}
+              className="img-thumbnail border-0"
               poster="poster.jpg"
               loop
               muted
@@ -47,12 +48,13 @@ const BannerDialog = ({
           ) : (
             <img
               src={item.data.attributes.url}
-              style={{ height: "100%", paddingRight: "-105%" }}
+              className="img-thumbnail border-0"
+              style={{  height: "90%"}}
             />
           )}
-          <Typography className="MediaCaption">
+      {/*     <Typography className="MediaCaption">
             {item.data.attributes.name}
-          </Typography>
+          </Typography> */}
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose}>Fechar</Button>

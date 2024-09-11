@@ -2,24 +2,25 @@ import * as React from "react";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
-import { ListItem, Typography } from "@mui/material";
+import { ListItem } from "@mui/material";
 
-import ListSubheader from "@mui/material/ListSubheader";
 import List from "@mui/material/List";
-import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import Collapse from "@mui/material/Collapse";
 import { Check } from "lucide-react";
+import { ServiceDescriptionType, ServiceDetailType } from "../Services";
 
-export function NestedList({
-  items,
-  title,
-}: {
-  items: string[];
+export type TabPainelType = {
+  index: number;
+  value: number;
+  image: string;
   title: string;
-}) {
+  types: ServiceDescriptionType[];
+};
+
+export function NestedList({ types }: { types: ServiceDescriptionType[] }) {
   const [open, setOpen] = React.useState(true);
+
 
   const handleClick = () => {
     setOpen(!open);
@@ -27,17 +28,17 @@ export function NestedList({
 
   return (
     <List
-      sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper" }}
+      sx={{ width: "100%",  height: "360px", overflow: "scroll", bgcolor: "background.paper" }}
       component="nav"
       aria-labelledby="nested-list-subheader"
     >
       <List component="div" disablePadding>
-        {items.map((desc) => (
+        {types.map(({ description }) => (
           <ListItem sx={{ pl: 4 }}>
             <ListItemIcon>
               <Check />
             </ListItemIcon>
-            <ListItemText primary={desc} />
+            <ListItemText primary={description} />
           </ListItem>
         ))}
       </List>
@@ -45,17 +46,8 @@ export function NestedList({
   );
 }
 
-export interface TabPanelProps {
-  index?: number;
-  value?: number;
-  img: any;
-  title: string;
-  items: Array<string>;
-}
-
-function CustomTabPanel(props: TabPanelProps) {
+function CustomTabPanel(props: TabPainelType) {
   const { value, index, ...other } = props;
-
   return (
     <div
       role="tabpanel"
@@ -72,21 +64,26 @@ function CustomTabPanel(props: TabPanelProps) {
               className="col-md-6"
               style={{
                 height: "60vh",
-                backgroundImage: `url(${props.img})`,
+                backgroundImage: `url(${props.image})`,
                 backgroundRepeat: "no-repeat",
+                backgroundPosition: "center",
                 backgroundSize: "cover",
               }}
             ></div>
-            <div className="col-md-6" style={{ padding: "5%", backgroundColor: "#fff" }}>
+            <div
+              className="col-md-6"
+              style={{ padding: "5%", backgroundColor: "#fff" }}
+            >
               <h2 data-aos="fade-up" data-aos-delay="50">
                 {props.title}
               </h2>
+              <hr />
               <div
                 className="description pt-3"
                 data-aos="fade-up"
                 data-aos-delay="150"
               >
-                <NestedList items={props.items} title={props.title} />
+                <NestedList types={props.types} />
               </div>
             </div>
           </div>
@@ -103,7 +100,7 @@ function a11yProps(index: number) {
   };
 }
 
-export default function MyTab({ data }: { data: Array<TabPanelProps> }) {
+export default function MyTab({ data }: { data: ServiceDetailType[] }) {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
@@ -138,9 +135,9 @@ export default function MyTab({ data }: { data: Array<TabPanelProps> }) {
           key={"tabPanel-" + index}
           index={index}
           value={value}
-          img={el.img}
+          image={el.image.data.attributes.url}
           title={el.title}
-          items={el.items}
+          types={el.types}
         />
       ))}
     </Box>
